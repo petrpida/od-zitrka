@@ -1,0 +1,14 @@
+.fadeIn {
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-name: fadein;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
