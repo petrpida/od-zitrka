@@ -9,6 +9,8 @@ import Housekeeping from "./routes/Housekeeping";
 import Traveling from "./routes/Traveling";
 import Blog from "./routes/Blog";
 import Projects from "./routes/Projects";
+import Home from "./routes/Home";
+import Contact from "./routes/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,13 +18,13 @@ root.render(
       <BrowserRouter>
           <Routes>
               <Route path="/" element={<App/>}>
+                  <Route path="" element={<Home />} />
                   <Route path="About" element={<About />} />
                   <Route path="Housekeeping" element={<Housekeeping />} />
                   <Route path="Traveling" element={<Traveling />} />
                   <Route path="Blog" element={<Blog />} />
-                  <Route path="Project1" element={<Projects />} />
-                  <Route path="Project2" element={<Projects />} />
-                  <Route path="Project3" element={<Projects />} />
+                  <Route path="Projects" element={<Projects />} />
+                  <Route path="Contact" element={<Contact />} />
               </Route>
           </Routes>
       </BrowserRouter>

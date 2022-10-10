@@ -1,5 +1,9 @@
-export default function Blog () {
+import styles from '../css/Blog.module.css'
+
+export default function Blog() {
     return (
-        <h1>Blog</h1>
+        <div className={styles.fadeIn}>
+            <h1>Blog</h1>
+        </div>
     )
 }

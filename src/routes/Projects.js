@@ -1,5 +1,9 @@
-export default function Projects () {
+import styles from '../css/Projects.module.css'
+
+export default function Projects() {
     return (
-        <h1>Projekty</h1>
+        <div className={styles.fadeIn}>
+            <h1>Projekty</h1>
+        </div>
     )
 }

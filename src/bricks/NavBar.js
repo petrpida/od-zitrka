@@ -1,4 +1,4 @@
-import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import logo from '../logo.svg'
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
@@ -8,8 +8,8 @@ export default function NavBar() {
     const [expanded, setExpanded] = useState(false)
 
     return (
-        <Navbar expanded={expanded} sticky="top" bg="dark" variant="dark" expand="lg" className="ps-lg-5 pe-lg-5 ps-3 pe-3">
-            <Navbar.Brand type="button" onClick={() => navigate('/')} >
+        <Navbar expanded={expanded} sticky="top" bg="dark" variant="dark" expand="lg" className="ps-lg-3 pe-lg-3 ps-2 pe-2">
+            <Navbar.Brand type="button" onClick={() => {navigate('/'); setExpanded(false)}} >
                 <img
                     alt=""
                     src={logo}
@@ -38,20 +38,14 @@ export default function NavBar() {
                         navigate('/Blog');
                         setExpanded(false)
                     }}>blog</Nav.Link>
-                    <NavDropdown title="projekty" align="end" id="collapsible-nav-dropdown">
-                        <NavDropdown.Item onClick={() => {
-                            navigate('/Project1');
-                            setExpanded(false)
-                        }} className="text-center">projekt 1</NavDropdown.Item>
-                        <NavDropdown.Item onClick={() => {
-                            navigate('/Project2');
-                            setExpanded(false)
-                        }} className="text-center">projekt 2</NavDropdown.Item>
-                        <NavDropdown.Item onClick={() => {
-                            navigate('/Project3');
-                            setExpanded(false)
-                        }} className="text-center">projekt 3</NavDropdown.Item>
-                    </NavDropdown>
+                    <Nav.Link onClick={() => {
+                        navigate('/Projects');
+                        setExpanded(false)
+                    }}>projekty</Nav.Link>
+                    <Nav.Link onClick={() => {
+                        navigate('/Contact');
+                        setExpanded(false)
+                    }}>kontakt</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

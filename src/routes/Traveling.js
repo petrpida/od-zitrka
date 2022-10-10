@@ -1,5 +1,9 @@
-export default function Traveling () {
+import styles from '../css/Traveling.module.css'
+
+export default function Traveling() {
     return (
-        <h1>Cestování</h1>
+        <div className={styles.fadeIn}>
+            <h1>Cestování</h1>
+        </div>
     )
 }
